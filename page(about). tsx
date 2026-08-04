@@ -1,0 +1,321 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { 
+  Rocket, 
+  Target, 
+  Heart, 
+  Lightbulb, 
+  Users, 
+  Code2,
+  Cloud,
+  Brain,
+  ArrowRight
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const teamMembers = [
+  {
+    name: "Tife Adejuwon",
+    role: "Founder & CEO",
+    bio: "10+ years in software engineering and tech leadership. Passionate about building products that solve real problems.",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Tife",
+    social: { linkedin: "#", twitter: "#", github: "#" }
+  },
+  {
+    name: "Sarah Johnson",
+    role: "Head of Engineering",
+    bio: "Full-stack architect with expertise in scalable systems and cloud infrastructure.",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+    social: { linkedin: "#", twitter: "#", github: "#" }
+  },
+  {
+    name: "Michael Okonkwo",
+    role: "AI/ML Lead",
+    bio: "Machine Learning engineer with a PhD in Computer Vision from MIT.",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Michael",
+    social: { linkedin: "#", twitter: "#", github: "#" }
+  },
+  {
+    name: "Grace Okafor",
+    role: "Product Designer",
+    bio: "Designing beautiful, intuitive interfaces that users love. 5+ years in product design.",
+    image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Grace",
+    social: { linkedin: "#", twitter: "#", github: "#" }
+  }
+];
+
+const values = [
+  {
+    icon: Rocket,
+    title: "Innovation First",
+    description: "We push boundaries and embrace emerging technologies to deliver cutting-edge solutions."
+  },
+  {
+    icon: Target,
+    title: "Results Driven",
+    description: "We focus on delivering measurable business outcomes that drive growth."
+  },
+  {
+    icon: Heart,
+    title: "Client Success",
+    description: "Your success is our success. We're committed to your long-term growth."
+  },
+  {
+    icon: Lightbulb,
+    title: "Creative Problem Solving",
+    description: "We think outside the box to find elegant solutions to complex challenges."
+  }
+];
+
+const stats = [
+  { value: "50+", label: "Clients Served" },
+  { value: "100+", label: "Projects Delivered" },
+  { value: "4.9", label: "Average Client Rating" },
+  { value: "5+", label: "Years of Excellence" }
+];
+
+const technologies = [
+  { name: "Frontend", techs: ["React", "Next.js", "TypeScript", "Tailwind"] },
+  { name: "Backend", techs: ["Node.js", "Python", "Go", "Java"] },
+  { name: "Cloud", techs: ["AWS", "Azure", "GCP", "Docker"] },
+  { name: "AI/ML", techs: ["TensorFlow", "PyTorch", "LangChain", "OpenAI"] }
+];
+
+export default function AboutPage() {
+  return (
+    <div className="py-20 md:py-28">
+      {/* Hero Section */}
+      <section className="container mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-6xl">
+            About <span className="gradient-text">TifeLabs</span>
+          </h1>
+          <p className="text-lg text-muted-foreground md:text-xl">
+            We're a team of passionate technologists building the future
+            of software and AI-powered solutions.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="container mb-20">
+        <div className="grid gap-8 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="mb-4 text-3xl font-bold">Our Mission</h2>
+            <p className="mb-4 text-lg text-muted-foreground">
+              To empower organizations with innovative technology solutions that drive growth,
+              efficiency, and digital transformation.
+            </p>
+            <p className="text-muted-foreground">
+              We believe in the power of technology to solve complex problems and create
+              meaningful impact. Our team combines deep technical expertise with business
+              acumen to deliver solutions that matter.
+            </p>
+            <Button className="mt-6 gap-2" asChild>
+              <Link href="/contact">
+                Join Our Mission <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            <div className="rounded-2xl bg-primary/5 p-6 text-center">
+              <Code2 className="mx-auto mb-2 h-8 w-8 text-primary" />
+              <h3 className="font-semibold">100+</h3>
+              <p className="text-sm text-muted-foreground">Projects</p>
+            </div>
+            <div className="rounded-2xl bg-primary/5 p-6 text-center">
+              <Users className="mx-auto mb-2 h-8 w-8 text-primary" />
+              <h3 className="font-semibold">50+</h3>
+              <p className="text-sm text-muted-foreground">Clients</p>
+            </div>
+            <div className="rounded-2xl bg-primary/5 p-6 text-center">
+              <Brain className="mx-auto mb-2 h-8 w-8 text-primary" />
+              <h3 className="font-semibold">4.9/5</h3>
+              <p className="text-sm text-muted-foreground">Rating</p>
+            </div>
+            <div className="rounded-2xl bg-primary/5 p-6 text-center">
+              <Cloud className="mx-auto mb-2 h-8 w-8 text-primary" />
+              <h3 className="font-semibold">5+</h3>
+              <p className="text-sm text-muted-foreground">Years</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="container mb-20">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="rounded-2xl border bg-muted/30 p-6 text-center"
+            >
+              <div className="text-3xl font-bold text-primary md:text-4xl">
+                {stat.value}
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="container mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <h2 className="mb-4 text-3xl font-bold">Our Core Values</h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            The principles that guide everything we do at TifeLabs.
+          </p>
+        </motion.div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {values.map((value, index) => {
+            const Icon = value.icon;
+            return (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="rounded-2xl border bg-background p-6 text-center transition-all hover:shadow-lg"
+              >
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                  <Icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 font-semibold">{value.title}</h3>
+                <p className="text-sm text-muted-foreground">{value.description}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="container mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <h2 className="mb-4 text-3xl font-bold">Our Tech Stack</h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            The modern technologies we use to build exceptional solutions.
+          </p>
+        </motion.div>
+
+        <div className="grid gap-6 md:grid-cols-4">
+          {technologies.map((category, index) => (
+            <motion.div
+              key={category.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="rounded-2xl border bg-muted/30 p-6"
+            >
+              <h3 className="mb-3 font-semibold">{category.name}</h3>
+              <div className="flex flex-wrap gap-2">
+                {category.techs.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full bg-background px-3 py-1 text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="container mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-12 text-center"
+        >
+          <h2 className="mb-4 text-3xl font-bold">Meet the Team</h2>
+          <p className="mx-auto max-w-2xl text-muted-foreground">
+            The talented people behind TifeLabs who bring your ideas to life.
+          </p>
+        </motion.div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {teamMembers.map((member, index) => (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="rounded-2xl border bg-background p-6 text-center transition-all hover:shadow-lg"
+            >
+              <div className="mx-auto mb-4 h-24 w-24 overflow-hidden rounded-full">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={96}
+                  height={96}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <h3 className="font-semibold">{member.name}</h3>
+              <p className="text-sm text-primary">{member.role}</p>
+              <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-blue-600 p-8 text-center text-white md:p-12"
+        >
+          <div className="relative z-10 mx-auto max-w-3xl">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+              Want to Work With Us?
+            </h2>
+            <p className="mb-6 text-white/90">
+              Let's build something amazing together. Get in touch today.
+            </p>
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/contact">Start a Project</Link>
+            </Button>
+          </div>
+        </motion.div>
+      </section>
+    </div>
+  );
+}
