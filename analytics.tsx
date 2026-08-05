@@ -11,7 +11,8 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || ''
+// Uses environment variable or falls back directly to your measurement ID
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-ZJNNMTSKF3'
 
 function AnalyticsContent() {
   const pathname = usePathname()
