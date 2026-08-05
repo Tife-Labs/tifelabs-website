@@ -26,29 +26,3 @@ This website serves as the primary digital front door for TifeLabs. Built with p
 * **Icons & Primitives:** Lucide React, Radix UI Slot, Class Variance Authority
 * **Form Backend:** Formspree
 * **Hosting:** [Vercel](https://vercel.com)
-
----
-
-## ⚙️ Environment Variables
-
-To run this project locally or configure deployment settings on Vercel, ensure the following environment variables are set up in your `.env.local` file:
-
-```env
-# Google Analytics
-NEXT_PUBLIC_GA_ID="G-ZJNNMTSKF3"
-
-# Formspree Endpoint
-NEXT_PUBLIC_FORMSPREE_ID="mlgqqwyz"
-
-# Site Configuration
-NEXT_PUBLIC_SITE_URL="[https://tifelabs.vercel.app](https://tifelabs.vercel.app)"
-NEXT_PUBLIC_SITE_NAME="TifeLabs"
-
-# Contact Details
-NEXT_PUBLIC_EMAIL="tifelabscontact@gmail.com"
-NEXT_PUBLIC_PHONE="+234-703-593-0768"
-
-# Social Media Profiles
-NEXT_PUBLIC_GITHUB="[https://github.com/tifelabs](https://github.com/tifelabs)"
-NEXT_PUBLIC_TWITTER="[https://twitter.com/tifelabs](https://twitter.com/tifelabs)"
-NEXT_PUBLIC_LINKEDIN="[https://linkedin.com/company/tifelabs](https://linkedin.com/company/tifelabs)"
