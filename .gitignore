@@ -1,0 +1,94 @@
+# ==========================================
+# Dependencies
+# ==========================================
+/node_modules
+/.pnp
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ==========================================
+# Next.js & Build Outputs
+# ==========================================
+/.next/
+/out/
+/build
+/dist
+.turbo
+
+# ==========================================
+# Environment Variables (Strict Block)
+# ==========================================
+.env*
+!.env.example
+!.env.template
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+/coverage
+
+# ==========================================
+# Debug & Logs
+# ==========================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs/
+*.log
+
+# ==========================================
+# TypeScript
+# ==========================================
+*.tsbuildinfo
+# DO NOT ignore next-env.d.ts
+
+# ==========================================
+# Security & Certificates
+# ==========================================
+*.pem
+*.key
+*.cert
+*.crt
+
+# ==========================================
+# IDEs and Editors
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*~
+
+# ==========================================
+# Vercel
+# ==========================================
+.vercel
+
+# ==========================================
+# OS & System Artifacts
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# Temporary Files & Caches
+# ==========================================
+/tmp/
+/temp/
+*.tmp
+.cache/
