@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, Home, HelpCircle } from 'lucide-react'
+import { Home, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '404: Page Not Found',
