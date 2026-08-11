@@ -78,20 +78,6 @@ const values = [
   }
 ];
 
-const stats = [
-  { value: "50+", label: "Clients Served" },
-  { value: "100+", label: "Projects Delivered" },
-  { value: "4.9", label: "Average Client Rating" },
-  { value: "5+", label: "Years of Excellence" }
-];
-
-const technologies = [
-  { name: "Frontend", techs: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { name: "Backend", techs: ["Node.js", "Python", "Go", "Java"] },
-  { name: "Cloud", techs: ["AWS", "Azure", "GCP", "Docker"] },
-  { name: "AI/ML", techs: ["TensorFlow", "PyTorch", "LangChain", "OpenAI"] }
-];
-
 export default function AboutPage() {
   return (
     <div className="py-20 md:py-28">
